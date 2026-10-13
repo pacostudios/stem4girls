@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join STEM4Girls - Volunteer, Mentor, or Partner with us to empower the next generation of STEM leaders">
+    <title>Join Us | STEM4Girls</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .join-hero {
+            padding: 60px 0;
+            background: #fafafa;
+        }
+        .join-hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .join-hero-image {
+            flex: 1;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        .join-hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .join-hero-content {
+            flex: 1;
+        }
+        .join-hero-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+        .join-hero-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .join-ways {
+            padding: 70px 0;
+            background: #fff;
+        }
+        .join-ways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .join-card {
+            background: #f9f9fb;
+            border-radius: 14px;
+            padding: 36px 28px;
+            text-align: center;
+            border: 1px solid #ebebeb;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .join-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+            transform: translateY(-4px);
+        }
+        .join-card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+            display: block;
+        }
+        .join-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+        .join-card p {
+            font-size: 0.97rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+        .join-card .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: linear-gradient(135deg, #ff6b9d, #c44dff);
+            color: #fff;
+            transition: opacity 0.2s;
+        }
+        .join-card .btn:hover {
+            opacity: 0.88;
+        }
+        .join-why {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #fff0f7 0%, #f3e8ff 100%);
+        }
+        .join-why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .why-item .why-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .why-item div h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+        .why-item div p {
+            font-size: 0.93rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .join-hero-inner {
+                flex-direction: column;
+                gap: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-inverse.png" alt="STEM4Girls" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="competition.html">Competition</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="previous-projects.html">Previous Projects</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="join-us.html" class="active">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="register.html" class="btn-primary">Register Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Join Us</h1>
+            <p>Be a part of something bigger — help us inspire the next generation of STEM leaders</p>
+        </div>
+    </section>
+
+    <!-- Hero Image + Intro -->
+    <section class="join-hero">
+        <div class="container">
+            <div class="join-hero-inner">
+                <div class="join-hero-image">
+                    <img src="images/join_stem.jfif" alt="Join STEM4Girls community">
+                </div>
+                <div class="join-hero-content">
+                    <h2>Make a Difference with STEM4Girls</h2>
+                    <p>At STEM4Girls, we believe that every young mind deserves access to the tools, mentorship, and encouragement to pursue a future in science, technology, engineering, and mathematics.</p>
+                    <p>Our community thrives because of passionate individuals who give their time, expertise, and energy to help students dream bigger and reach further. Whether you are a researcher, an industry professional, an educator, or simply someone who cares deeply about equity in STEM — there is a place for you here.</p>
+                    <p>By joining our growing network of volunteers, mentors, advisors, and partners, you directly impact the lives of students across the globe who are tackling real-world health challenges through the power of STEM.</p>
+                    <a href="contact.html" class="btn btn-primary">Get In Touch →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Join -->
+    <section class="join-ways">
+        <div class="container">
+            <h2 class="section-title text-center">Ways to Get Involved</h2>
+            <p class="text-center section-description">Choose the role that fits your skills and passion — every contribution matters.</p>
+            <div class="join-ways-grid">
+                <div class="join-card">
+                    <span class="join-card-icon">🧑‍🏫</span>
+                    <h3>Volunteer</h3>
+                    <p>Support our events, outreach efforts, and day-to-day operations. Volunteers are the backbone of STEM4Girls and help us run smoothly at every level.</p>
+                    <a href="contact.html" class="btn">Volunteer Now</a>
+                </div>
+                <div class="join-card">
+                    <span class="join-card-icon">👩‍🔬</span>
+                    <h3>Mentor a Team</h3>
+                    <p>Share your STEM expertise by guiding student teams through their research proposals. Your knowledge and encouragement can be life-changing for a young scientist.</p>
+                    <a href="contact.html" class="btn">Become a Mentor</a>
+                </div>
+                <div class="join-card">
+                    <span class="join-card-icon">🏢</span>
+                    <h3>Partner With Us</h3>
+                    <p>Organizations and institutions can collaborate with STEM4Girls to co-host events, provide resources, and expand our global reach. Let's build a brighter future together.</p>
+                    <a href="contact.html" class="btn">Explore Partnership</a>
+                </div>
+                <div class="join-card">
+                    <span class="join-card-icon">💰</span>
+                    <h3>Sponsor</h3>
+                    <p>Your financial support directly funds student research grants, competition infrastructure, and educational resources for participants around the world.</p>
+                    <a href="donate.html" class="btn">Donate Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join -->
+    <section class="join-why">
+        <div class="container">
+            <h2 class="section-title text-center">Why Join STEM4Girls?</h2>
+            <div class="join-why-grid">
+                <div class="why-item">
+                    <span class="why-icon">🌍</span>
+                    <div>
+                        <h4>Global Impact</h4>
+                        <p>Connect with students and professionals from countries around the world who share your passion for STEM and health innovation.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">🎓</span>
+                    <div>
+                        <h4>Shape Future Leaders</h4>
+                        <p>Your guidance helps young researchers develop confidence, critical thinking, and the skills they need to succeed in STEM careers.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">🤝</span>
+                    <div>
+                        <h4>Build Your Network</h4>
+                        <p>Work alongside fellow educators, researchers, and industry experts who are equally committed to equity and excellence in STEM.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">💡</span>
+                    <div>
+                        <h4>Learn & Grow</h4>
+                        <p>Mentoring is a two-way street. Many of our volunteers and mentors say they leave every interaction inspired by the creativity of the students they support.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">🏆</span>
+                    <div>
+                        <h4>Recognition</h4>
+                        <p>Mentors and volunteers are recognized at our annual IRCC conference and featured across our platforms and communications.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">💜</span>
+                    <div>
+                        <h4>Advance Inclusion</h4>
+                        <p>Help us break down barriers and ensure every student — especially young women — has the opportunity to thrive in STEM.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join Our Mission?</h2>
+                <p>Reach out today and let us find the perfect role for you in the STEM4Girls community.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+                    <a href="register.html" class="btn btn-outline btn-lg">Register a Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">
+                        <img src="images/logo-inverse.png" alt="STEM4Girls">
+                    </h3>
+                    <p>Empowering the next generation of STEM leaders through health and innovation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="competition.html">Competition</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="previous-projects.html">Previous Projects</a></li>
+                        <li><a href="join-us.html">Join Us</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 stem@stem4girls.org</li>
+                        <li>📞 503-583-2255</li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STEM4Girls. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

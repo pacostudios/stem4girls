@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the STEM4Girls team - passionate educators and STEM advocates">
+    <title>Our Team | STEM4Girls</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* President – single card, centered */
+        .team-grid-solo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: var(--spacing-xl, 2.5rem);
+        }
+        .team-grid-solo .team-card {
+            max-width: 360px;
+            width: 100%;
+        }
+
+        /* VP / Secretary / Ambassador – fixed 3-column row */
+        .team-grid-three {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg, 2rem);
+        }
+        @media (max-width: 900px) {
+            .team-grid-three {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 580px) {
+            .team-grid-three {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-inverse.png" alt="STEM4Girls" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="competition.html">Competition</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="previous-projects.html">Previous Projects</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li><li><a href="register.html" class="btn-primary">Register Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Meet Our Team</h1>
+            <p>Dedicated professionals committed to empowering the next generation through STEM education</p>
+        </div>
+    </section>
+
+    <!-- Team Introduction -->
+    <section class="team-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="section-title">Our Leadership</h2>
+                <p class="large-text">The STEM4Girls team is composed of passionate educators, scientists, and advocates who are dedicated to inspiring young minds and promoting STEM education, especially for girls and underrepresented groups.</p>
+                <p>Our diverse team brings together expertise in education, scientific research, program management, and community outreach to create meaningful opportunities for students worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Members -->
+    <section class="team-members board-members">
+        <div class="container">
+            <h2 class="section-title text-center">Board Members</h2>
+
+            <!-- President – centered solo row -->
+            <div class="team-grid team-grid-solo">
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/preethi.jpeg" alt="Preethi">
+                    </div>
+                    <div class="team-info">
+                        <h3>Preethi Pinto</h3>
+                        <p class="team-role">President</p>
+                        <p class="team-description">Overseeing operations and programs, ensuring that STEM4Girls continues to provide exceptional opportunities for students to explore and excel in STEM fields.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VP, Secretary, Student Ambassador – 3-column row -->
+            <div class="team-grid team-grid-three">
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/Meghan Clement.jpg" alt="Meghan Clement">
+                    </div>
+                    <div class="team-info">
+                        <h3>Meghan Clement</h3>
+                        <p class="team-role">Vice President</p>
+                        <p class="team-description">Supporting strategic initiatives and collaborating with the team to advance STEM4Girls' mission and impact.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/Dhikshaa Arunsundar.jpg" alt="Dhikshaa Arunsundar">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dhikshaa Arunsundar</h3>
+                        <p class="team-role">Secretary</p>
+                        <p class="team-description">Managing organizational records and coordinating communications to ensure smooth operations and effective team collaboration.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/Mahati Lakshminarayan.jpg" alt="Mahati Lakshminarayan">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mahati Lakshminarayan</h3>
+                        <p class="team-role">Student Ambassador</p>
+                        <p class="team-description">Representing the student voice and helping to connect STEM4Girls programs with student communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Committee -->
+    <section class="team-members executive-committee">
+        <div class="container">
+            <h2 class="section-title text-center">Executive Committee</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/nixon.png" alt="Mr. Nixon Xavier">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mr. Nixon Xavier</h3>
+                        <p class="team-role">Chief Patron, CEO</p>
+                        <p class="team-description">Leading STEM4Girls with a vision to create global impact through education and innovation. Dedicated to building sustainable programs that empower students.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/raibin.png" alt="Raibin Raphy">
+                    </div>
+                    <div class="team-info">
+                        <h3>Raibin Raphy</h3>
+                        <p class="team-role">Co-Patron</p>
+                        <p class="team-description">Supporting the mission of STEM4Girls through strategic guidance and fostering partnerships to expand our reach and impact.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/finosh-latest.png" alt="Dr. Finosh Thankam">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Finosh Thankam</h3>
+                        <p class="team-role">Scientific Expert</p>
+                        <p class="team-description">Providing scientific expertise and mentorship to ensure the quality and rigor of student research projects and educational programs.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/raina.png" alt="Ms. Raina Raphy">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ms. Raina Raphy</h3>
+                        <p class="team-role">Co-Patron</p>
+                        <p class="team-description">Supporting the mission of STEM4Girls through strategic guidance and fostering partnerships to expand our reach and impact.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image-placeholder">
+                        <img src="images/alosyus.png" alt="Mr. Aloysius">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mr. Aloysius</h3>
+                        <p class="team-role">Financial Adviser</p>
+                        <p class="team-description">Providing financial oversight and guidance to ensure responsible stewardship of resources and sustainable growth of our programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organization Info -->
+    <section class="organization-info">
+        <div class="container">
+            <div class="info-box">
+                <h2 class="section-title">About STEM4Girls Organization</h2>
+                <p>STEM4Girls is a non-profit corporation operating exclusively for charitable, educational, and scientific purposes within the meaning of Section 501(c)(3) of the Internal Revenue Code.</p>
+                <p>Our purpose is to encourage the pursuit of Science, Technology, Engineering, and Math – collectively termed STEM fields. We place particular emphasis on the encouragement and involvement of girls and other underrepresented groups in STEM fields.</p>
+                <div class="mission-points">
+                    <div class="point-item">
+                        <span class="point-icon">🎯</span>
+                        <div>
+                            <h4>Our Mission</h4>
+                            <p>To instill a love for STEM in girls across the globe and bridge the gap between students and the resources they need to grow their ideas.</p>
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <span class="point-icon">🤝</span>
+                        <div>
+                            <h4>Collaboration</h4>
+                            <p>Encouraging girls to establish active collaboration among peer groups, improving their outlook towards STEM and contribution to science.</p>
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <span class="point-icon">📚</span>
+                        <div>
+                            <h4>Education with Fun</h4>
+                            <p>Bringing knowledge with fun through educational workshops and camps designed to garner the interest of young minds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <section class="join-team">
+        <div class="container">
+            <div class="join-content">
+                <h2>Want to Get Involved?</h2>
+                <p>We're always looking for passionate educators, scientists, and volunteers who share our vision of empowering students through STEM education.</p>
+                <div class="join-options">
+                    <div class="join-option">
+                        <h3>🎓 Mentor Students</h3>
+                        <p>Share your expertise and guide students through their research projects</p>
+                    </div>
+                    <div class="join-option">
+                        <h3>🤝 Partner With Us</h3>
+                        <p>Collaborate with STEM4Girls to expand our reach and impact</p>
+                    </div>
+                    <div class="join-option">
+                        <h3>💝 Support Our Mission</h3>
+                        <p>Help us provide more opportunities for students worldwide</p>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary btn-lg">Contact Us to Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">
+                        <img src="images/logo-inverse.png" alt="STEM4Girls">
+                    </h3>
+                    <p>Empowering the next generation of STEM leaders through innovation and sustainability.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="competition.html">Competition</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+						<li><a href="previous-projects.html">Previous Projects</a></li>
+                        <li><a href="donate.html">Donate</a></li><li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 stem@stem4girls.org</li>
+                        <li>📞 503-583-2255</li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STEM4Girls. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

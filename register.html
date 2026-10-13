@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register your team for the STEM4Health Challenge">
+    <title>Register | STEM4Girls</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-inverse.png" alt="STEM4Girls" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="competition.html">Competition</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="previous-projects.html">Previous Projects</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html" class="btn-primary active">Register Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Register Your Team</h1>
+            <p>Start your journey toward creating innovative Health solutions</p>
+        </div>
+    </section>
+
+    <!-- Registration Info -->
+    <section class="registration-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">📝</div>
+                    <h3>Registration Opens</h3>
+                    <p>February 3, 2026</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📤</div>
+                    <h3>Proposal Deadline</h3>
+                    <p>May 5, 2026</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">👥</div>
+                    <h3>Team Size</h3>
+                    <p>4-10 students (1+ female)</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">💰</div>
+                    <h3>Registration Fee</h3>
+                    <p>FREE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-sidebar">
+                    <h2>Before You Register</h2>
+                    <div class="requirements-checklist">
+                        <h3>Team Requirements</h3>
+                        <ul>
+                            <li>✓ 4-10 students per team</li>
+                            <li>✓ At least one female member</li>
+                            <li>✓ All team members from same age category</li>
+                        </ul>
+                    </div>
+                    <div class="requirements-checklist">
+                        <h3>What You'll Need</h3>
+                        <ul>
+                            <li>Team leader's contact information</li>
+                            <li>Number of team members</li>
+                            <li>Age category selection</li>
+                            <li>Brief message about your interests</li>
+                        </ul>
+                    </div>
+                    <div class="help-box">
+                        <p><strong>Need help?</strong></p>
+                        <p>Contact us at:<br>
+                        📧 stem@stem4girls.org<br>
+                        📞 503-583-2255</p>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form id="registrationForm" class="registration-form" action="https://submit.stem4girls.org/register" method="POST">
+                        <h2>Registration Form</h2>
+                        <p class="form-description">Fill out the form below to register your team for STEM4Health 2026-2026</p>
+
+                        <div class="form-group">
+                            <label for="teamLeaderName">Team Leader Name <span class="required">*</span></label>
+                            <input type="text" id="teamLeaderName" name="teamLeaderName" required placeholder="Enter full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country <span class="required">*</span></label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="United States">United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Japan">Japan</option>
+                                <option value="China">China</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Age Category <span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="Elementary">Elementary School (1st-5th grade)</option>
+                                <option value="Middle">Middle School (6th-8th grade)</option>
+                                <option value="High">High School (9th-12th grade)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="teamSize">Number of Team Members <span class="required">*</span></label>
+                            <input type="number" id="teamSize" name="teamSize" min="4" max="10" required placeholder="4-10 members">
+                            <small class="form-hint">Teams must have 4-10 students with at least one female member</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectArea">Primary Project Area (Optional)</label>
+                            <select id="projectArea" name="projectArea">
+                                <option value="">Select if you have an idea</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Environment">Environmental Science</option>
+                                <option value="Computer Science">Computer Science & AI</option>
+                                <option value="Medicine">Medicine & Biology</option>
+                                <option value="Other">Other STEM Field</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message / Additional Information</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your team or any questions you have..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="howDidYouHear">How did you hear about this competition?</label>
+                            <select id="howDidYouHear" name="howDidYouHear">
+                                <option value="">Select option</option>
+                                <option value="GYRA">GYRA</option>
+                                <option value="SCIENTIA">SCIENTIA</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="STEM Website">STEM Website</option>
+                                <option value="Teacher/School">Teacher or School</option>
+                                <option value="Friend">Friend or Family</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required>
+                                <span>I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and understand the competition requirements <span class="required">*</span></span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Registration</button>
+                        </div>
+
+                        <p class="form-note">
+                            <strong>Note:</strong> Registration opens February 3, 2026. If you're registering before this date, we'll contact you when registration officially opens.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="next-steps">
+        <div class="container">
+            <h2 class="section-title text-center">What Happens After Registration?</h2>
+            <div class="steps-timeline">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Confirmation Email</h3>
+                    <p>You'll receive a confirmation email with your registration details and next steps</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Develop Your Proposal</h3>
+                    <p>Work with your team to develop your project proposal following our guidelines</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Submit Your Project</h3>
+                    <p>Submit your complete proposal by May 5, 2026 through our submission portal</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Expert Review</h3>
+                    <p>Proposals will be reviewed by experts in relevant STEM fields</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <h3>Results & Awards</h3>
+                    <p>Winners announced June 13-15, 2026 at the IRCC conference</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">
+                        <img src="images/logo-inverse.png" alt="STEM4Girls">
+                    </h3>
+                    <p>Empowering the next generation of STEM leaders through innovation and Health.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="competition.html">Competition</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+<li><a href="previous-projects.html">Previous Projects</a></li>
+                        <li><a href="donate.html">Donate</a></li><li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 stem@stem4girls.org</li>
+                        <li>📞 503-583-2255</li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STEM4Girls. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

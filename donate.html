@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support STEM4Girls – Your 501(c)(3) tax-deductible donation empowers the next generation of STEM leaders.">
+    <title>Donate | STEM4Girls</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ── Donate page overrides ───────────────────────────── */
+
+        /* Hero stat strip */
+        .donate-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+        .donate-stat {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--primary-color);
+            transition: var(--transition-base);
+        }
+        .donate-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .donate-stat .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+        .donate-stat .stat-label {
+            color: var(--dark-light);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        /* Main donate card */
+        .donate-section {
+            padding: var(--spacing-2xl) 0;
+            background: var(--light-bg);
+        }
+        .donate-card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            align-items: start;
+        }
+        .donate-info-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-lg);
+        }
+        .donate-info-card h2 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: var(--spacing-md);
+        }
+        .donate-info-card p {
+            color: var(--dark-light);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+        }
+        .tax-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, rgba(255,107,157,0.12), rgba(156,39,176,0.12));
+            color: var(--primary-dark);
+            border: 1.5px solid var(--primary-light);
+            border-radius: var(--radius-full);
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+        }
+        .impact-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--spacing-md) 0 var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        .impact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--dark-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .impact-list li .check {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .btn-donate {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: var(--radius-full);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-base);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            margin-top: var(--spacing-sm);
+        }
+        .btn-donate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 157, 0.5);
+        }
+
+        /* QR code panel */
+        .qr-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+        .qr-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: var(--spacing-sm);
+        }
+        .qr-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        .qr-wrapper {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto var(--spacing-lg);
+            border: 3px solid var(--primary-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-bg);
+        }
+        .qr-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .divider-or {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin: var(--spacing-md) 0;
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .divider-or::before,
+        .divider-or::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--light-bg);
+            border: 1px solid #f0d0df;
+        }
+
+        /* Ways to give */
+        .ways-section {
+            padding: var(--spacing-2xl) 0;
+            background: var(--white);
+        }
+        .ways-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        .way-card {
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            background: var(--light-bg);
+            text-align: center;
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+        .way-card:hover {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .way-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .way-card h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .way-card p {
+            color: var(--dark-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .donate-card-grid { grid-template-columns: 1fr; }
+            .qr-card { order: -1; }
+            .donate-stats { grid-template-columns: 1fr; }
+            .ways-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 580px) {
+            .ways-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-inverse.png" alt="STEM4Girls" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="competition.html">Competition</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="previous-projects.html">Previous Projects</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="active">Donate</a></li>
+                    <li><a href="register.html" class="btn-primary">Register Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Support STEM4Girls</h1>
+            <p>Your donation empowers the next generation of scientists, engineers, and innovators</p>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="team-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="section-title">Why Your Support Matters</h2>
+                <p class="large-text">STEM4Girls is a 501(c)(3) non-profit organization dedicated to inspiring girls and underrepresented groups to pursue careers in Science, Technology, Engineering, and Math. Every dollar you donate goes directly toward funding student research, providing grants, and organizing competitions that change lives.</p>
+            </div>
+            <div class="donate-stats">
+                <div class="donate-stat">
+                    <span class="stat-number">$250</span>
+                    <span class="stat-label">Maximum grant per outstanding project</span>
+                </div>
+                <div class="donate-stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">School categories funded (Elementary, Middle, High)</span>
+                </div>
+                <div class="donate-stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Donations go directly to student programs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section class="donate-section">
+        <div class="container">
+            <div class="donate-card-grid">
+
+                <!-- Left: Info & CTA -->
+                <div class="donate-info-card">
+                    <span class="tax-badge">✅ 501(c)(3) Tax-Deductible Donation</span>
+                    <h2>Make a Difference Today</h2>
+                    <p>STEM4Girls is a non-profit corporation operating exclusively for charitable, educational, and scientific purposes within the meaning of Section 501(c)(3) of the Internal Revenue Code. All qualifying donations are tax-deductible.</p>
+                    <p>Your contribution directly funds:</p>
+                    <ul class="impact-list">
+                        <li><span class="check">♥</span> Student research grants of up to $250 per outstanding project</li>
+                        <li><span class="check">♥</span> STEM competition organization and prizes across three school levels</li>
+                        <li><span class="check">♥</span> Educational workshops and camps designed to inspire young minds</li>
+                        <li><span class="check">♥</span> Scientific mentorship and expert review panels for student projects</li>
+                        <li><span class="check">♥</span> Opportunities for students to present at the International Research Conference for Children (IRCC)</li>
+                    </ul>
+                    <a href="https://link.waveapps.com/eggffb-mng69f"
+                       target="_blank" rel="noopener"
+                       class="btn-donate">
+                        💝 Donate Now
+                    </a>
+                    <p style="text-align:center; font-size:0.8rem; color:var(--gray); margin-top:0.75rem;">
+                        Secure payment via WaveApps
+                    </p>
+                </div>
+
+                <!-- Right: QR Code -->
+                <div class="qr-card">
+                    <h3>Scan to Donate</h3>
+                    <p>Use your phone camera to scan the QR code and donate instantly.</p>
+
+                    <div class="qr-wrapper">
+                        <img src="images/QR_code.jpg" alt="STEM4Girls Donation QR Code">
+                    </div>
+
+                    <p style="font-size:0.85rem; color:var(--gray); margin-bottom:var(--spacing-sm);">
+                        Point your phone camera at the QR code to open the donation page instantly — no app needed.
+                    </p>
+
+                    <div class="divider-or">OR</div>
+
+                    <a href="https://link.waveapps.com/eggffb-mng69f"
+                       target="_blank" rel="noopener"
+                       class="btn-donate">
+                        💳 Donate Online
+                    </a>
+
+                    <p style="margin-top:var(--spacing-md); font-size:0.85rem; color:var(--gray);">
+                        Questions about donating? Email us at<br>
+                        <a href="mailto:stem@stem4girls.org" style="color:var(--primary-dark); font-weight:600;">stem@stem4girls.org</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Give -->
+    <section class="ways-section">
+        <div class="container">
+            <h2 class="section-title text-center">Ways to Support</h2>
+            <p class="large-text text-center" style="max-width:650px; margin:0 auto;">
+                There are many ways you can help STEM4Girls make an impact in students' lives.
+            </p>
+            <div class="ways-grid">
+                <div class="way-card">
+                    <div class="way-icon">💝</div>
+                    <h3>One-Time Donation</h3>
+                    <p>Make a single contribution of any amount. Every dollar directly funds student research grants and educational programs.</p>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">🔁</div>
+                    <h3>Recurring Support</h3>
+                    <p>Set up a monthly or annual gift to provide sustained support and help us plan programs with confidence throughout the year.</p>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">🤝</div>
+                    <h3>Corporate Partnership</h3>
+                    <p>Partner with us as a corporate sponsor to gain visibility while empowering the next generation of STEM professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Every Donation Makes a Difference</h2>
+                <p>Help us empower more girls to dream big, explore STEM, and change the world</p>
+                <div class="cta-buttons">
+                    <a href="https://link.waveapps.com/eggffb-mng69f"
+                       target="_blank" rel="noopener"
+                       class="btn btn-primary btn-lg">Donate Now</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">
+                        <img src="images/logo-inverse.png" alt="STEM4Girls">
+                    </h3>
+                    <p>Empowering the next generation of STEM leaders through innovation and sustainability.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="competition.html">Competition</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="previous-projects.html">Previous Projects</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 stem@stem4girls.org</li>
+                        <li>📞 503-583-2255</li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STEM4Girls. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Previous Projects – Completed student research from past STEM4Girls competitions">
+  <title>Previous Projects | STEM4Girls</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Competition year badge ─────────────────────────── */
+    .year-badge {
+      display: inline-block;
+      background: var(--light-bg);
+      color: var(--primary-color);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 1rem;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--spacing-md);
+      border: 2px solid var(--primary-light);
+    }
+
+    /* ── Photo gallery grid ─────────────────────────────── */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: var(--spacing-md);
+    }
+    .photo-gallery img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      display: block;
+      transition: var(--transition-base);
+      cursor: pointer;
+    }
+    .photo-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+      z-index: 1;
+      position: relative;
+    }
+    @media (max-width: 768px) {
+      .photo-gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .photo-gallery { grid-template-columns: 1fr; }
+    }
+
+    /* ── Video gallery grid ─────────────────────────────── */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: var(--spacing-md);
+    }
+    .video-gallery video {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      background: var(--dark);
+      display: block;
+      border: 2px solid var(--light-bg);
+    }
+    @media (max-width: 600px) {
+      .video-gallery { grid-template-columns: 1fr; }
+    }
+
+    /* ── Gallery section label ──────────────────────────── */
+    .gallery-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin: var(--spacing-xl) 0 var(--spacing-sm);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .gallery-heading::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: var(--light-bg);
+      border-radius: 2px;
+    }
+
+    /* ── Alt section background ─────────────────────────── */
+    .project-showcase.alt-section {
+      background: var(--light-bg);
+    }
+
+    /* ── Environment info list ──────────────────────────── */
+    .env-info-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    .env-info-list li {
+      background: var(--white);
+      padding: var(--spacing-md);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--primary-color);
+      color: var(--dark-light);
+      font-size: 0.95rem;
+    }
+    .env-info-list li strong {
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ════════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo">
+          <img src="images/logo-inverse.png" alt="STEM4Girls" class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="competition.html">Competition</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="previous-projects.html" class="active">Previous Projects</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="join-us.html">Join Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="register.html" class="btn-primary">Register Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HEADER (matches all other pages — gradient, no photo) ═ -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Previous Projects</h1>
+      <p>Celebrating student innovation and research excellence from past STEM4Girls competitions</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       STEM FOR AGRICULTURE 2021-22  —  intro showcase
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase">
+    <div class="container">
+      <h2 class="section-title">STEM4Agriculture</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Competition 2021 – 22</span>
+          <p class="large-text">The STEM for Agriculture competition ended on 31 December 2022.</p>
+          <p>Eight schools participated with innovative solutions in sustainable farming, crop optimisation, and environmental conservation. Students demonstrated the power of STEM in addressing real-world agricultural challenges.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Schools</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2021-22</span>
+              <span class="stat-label">Year</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="agricultureGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 1 — WILD VEGETABLE CULTIVATION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase alt-section" id="wild-veg">
+    <div class="container">
+      <h2 class="section-title">Wild Vegetable Cultivation</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">Exploring the nutritional and agricultural value of naturally occurring wild vegetables.</p>
+          <p>Vegetables naturally grown in fields are called wild vegetables. These plants come without being planted in nature. Wild varieties of vegetables are used to develop new types. Every vegetable is rich in minerals, iron, fibre, etc.</p>
+          <p>This project explored the potential of naturally occurring wild vegetables and their benefits for sustainable agriculture and nutrition in local communities.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">17</span>
+              <span class="stat-label">Photos</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="wildVegGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-heading">📷 Full Photo Gallery</div>
+      <div class="photo-gallery">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/1.jpg"  alt="Wild Veg 1">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/2.jpg"  alt="Wild Veg 2">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/3.jpg"  alt="Wild Veg 3">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/4.jpg"  alt="Wild Veg 4">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/5.jpg"  alt="Wild Veg 5">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/6.jpg"  alt="Wild Veg 6">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/7.jpg"  alt="Wild Veg 7">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/8.jpg"  alt="Wild Veg 8">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/9.jpg"  alt="Wild Veg 9">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/10.jpg" alt="Wild Veg 10">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/11.jpg" alt="Wild Veg 11">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/12.jpg" alt="Wild Veg 12">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/13.jpg" alt="Wild Veg 13">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/14.jpg" alt="Wild Veg 14">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/15.jpg" alt="Wild Veg 15">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/16.jpg" alt="Wild Veg 16">
+        <img src="assets/CompletedProjects/WildVegitableCultivation/17.jpg" alt="Wild Veg 17">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 2 — VERTICAL FARMING
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase" id="vertical-farming">
+    <div class="container">
+      <h2 class="section-title">Vertical Farming</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">Multi-layer farming as a modern solution to land scarcity and rising input costs.</p>
+          <p>Agriculture faces ever-increasing input costs, scarcity of cultivable land, migration of farming communities, and urbanisation. Our new concept tackles this through vertical farming — just as multi-level apartments solve space issues in cities, vertical farming provides an alternative to traditional agriculture using modern scientific techniques.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">27</span>
+              <span class="stat-label">Photos</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="verticalFarmGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-heading">📷 Full Photo Gallery</div>
+      <div class="photo-gallery">
+        <img src="assets/CompletedProjects/verical-farming/1.jpeg"  alt="VF 1">
+        <img src="assets/CompletedProjects/verical-farming/2.jpeg"  alt="VF 2">
+        <img src="assets/CompletedProjects/verical-farming/3.jpeg"  alt="VF 3">
+        <img src="assets/CompletedProjects/verical-farming/4.jpeg"  alt="VF 4">
+        <img src="assets/CompletedProjects/verical-farming/5.jpeg"  alt="VF 5">
+        <img src="assets/CompletedProjects/verical-farming/6.jpeg"  alt="VF 6">
+        <img src="assets/CompletedProjects/verical-farming/7.jpeg"  alt="VF 7">
+        <img src="assets/CompletedProjects/verical-farming/8.jpeg"  alt="VF 8">
+        <img src="assets/CompletedProjects/verical-farming/9.jpeg"  alt="VF 9">
+        <img src="assets/CompletedProjects/verical-farming/10.jpeg" alt="VF 10">
+        <img src="assets/CompletedProjects/verical-farming/11.jpeg" alt="VF 11">
+        <img src="assets/CompletedProjects/verical-farming/12.jpeg" alt="VF 12">
+        <img src="assets/CompletedProjects/verical-farming/13.jpeg" alt="VF 13">
+        <img src="assets/CompletedProjects/verical-farming/14.jpeg" alt="VF 14">
+        <img src="assets/CompletedProjects/verical-farming/15.jpeg" alt="VF 15">
+        <img src="assets/CompletedProjects/verical-farming/16.jpeg" alt="VF 16">
+        <img src="assets/CompletedProjects/verical-farming/17.jpeg" alt="VF 17">
+        <img src="assets/CompletedProjects/verical-farming/18.jpeg" alt="VF 18">
+        <img src="assets/CompletedProjects/verical-farming/19.jpeg" alt="VF 19">
+        <img src="assets/CompletedProjects/verical-farming/20.jpeg" alt="VF 20">
+        <img src="assets/CompletedProjects/verical-farming/21.jpeg" alt="VF 21">
+        <img src="assets/CompletedProjects/verical-farming/22.jpeg" alt="VF 22">
+        <img src="assets/CompletedProjects/verical-farming/23.jpeg" alt="VF 23">
+        <img src="assets/CompletedProjects/verical-farming/24.jpeg" alt="VF 24">
+        <img src="assets/CompletedProjects/verical-farming/25.jpeg" alt="VF 25">
+        <img src="assets/CompletedProjects/verical-farming/26.jpeg" alt="VF 26">
+        <img src="assets/CompletedProjects/verical-farming/27.jpeg" alt="VF 27">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 3 — PROTECTED CULTIVATION OF CAPSICUM
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase alt-section" id="capsicum">
+    <div class="container">
+      <h2 class="section-title">Protected Cultivation of Capsicum</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">Bringing modern agricultural technology to local farmers through protected cultivation.</p>
+          <p>We are planting capsicum in our Shednet. Capsicum is in great demand in urban markets. Protected cultivation protects plants from rain, wind, and high temperature while spreading new modern technology of agriculture to farmers of the local area. Our project approach is to sustain agriculture.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Photos</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="capsicumGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-heading">📷 Full Photo Gallery</div>
+      <div class="photo-gallery">
+        <img src="assets/CompletedProjects/harvestingofcapsicum/1.jpg" alt="Capsicum 1">
+        <img src="assets/CompletedProjects/harvestingofcapsicum/2.jpg" alt="Capsicum 2">
+        <img src="assets/CompletedProjects/harvestingofcapsicum/3.jpg" alt="Capsicum 3">
+        <img src="assets/CompletedProjects/harvestingofcapsicum/4.jpg" alt="Capsicum 4">
+        <img src="assets/CompletedProjects/harvestingofcapsicum/5.jpg" alt="Capsicum 5">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 4 — ORGANIC AGRI-DIVERSITY
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase" id="organic-agri">
+    <div class="container">
+      <h2 class="section-title">Organic Agri-Diversity in 1.1 Cents of Land</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">An inclusive farming model that reduces chemical dependency and efficiently uses scarce land.</p>
+          <p>We have been observant and came up with a plan that everyone can practice, with little space, using our farm produces. Our effort is to reduce the overdependence on chemical fertilisers and pesticides, efficiently utilising the already scarce agricultural areas.</p>
+          <p>We have tried to develop an inclusive model from finding suitable fertile land, planting seeds, and procuring the farm needs to irrigation techniques. Apart from traditional methods, we propose raising beds, hydroponics farming, terrace farming, aquaponics farming, aeroponics farming, etc.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <img src="images/sp1.jpg" alt="Organic Agri-Diversity" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);max-width:100%;width:380px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 5 — MULTIMODAL PORTABLE AGRICULTURAL GARDEN
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase alt-section" id="multimodal">
+    <div class="container">
+      <h2 class="section-title">Multimodal Portable Agricultural Garden</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">A closed vertical system combining fish culture with vegetable cultivation for sustainable living.</p>
+          <p>The primary aim of our plan and proposal is to create a multidimensional and portable vegetable garden, which is a closed vertical system. Our study hypothesises that cycling metabolites between closed farming systems helps create autonomous units with minimum waste, less energy expenditure, and better yield.</p>
+          <p>The study's main objective is to combine fish culture with vegetable cultivation, which supplies most greens in households and recreation.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <img src="images/sp5.jpg" alt="Multimodal Garden" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);max-width:100%;width:380px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 6 — GREEN BLISS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase" id="green-bliss">
+    <div class="container">
+      <h2 class="section-title">Green Bliss</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">A compassionate, chemical-free farming model for a healthier and more sustainable future.</p>
+          <p>As youngsters, we bring forward a small and compassionate model that will inspire and bring people back to effective and efficient farming methods and practices. Our inclusive model aims to produce non-toxic vegetables in the most harmless and sustainable ways.</p>
+          <p>Avoiding the dependence on chemical pesticides and fertilisers, we intend on using animal droppings and vermicompost for our farm as the manures. For a healthy survival and disease-free life, we propose this model.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">13</span>
+              <span class="stat-label">Photos</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="greenBlissGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-heading">📷 Full Photo Gallery</div>
+      <div class="photo-gallery">
+        <img src="assets/CompletedProjects/green-bliss/1.jpeg"  alt="Green Bliss 1">
+        <img src="assets/CompletedProjects/green-bliss/2.jpeg"  alt="Green Bliss 2">
+        <img src="assets/CompletedProjects/green-bliss/3.jpeg"  alt="Green Bliss 3">
+        <img src="assets/CompletedProjects/green-bliss/4.jpeg"  alt="Green Bliss 4">
+        <img src="assets/CompletedProjects/green-bliss/5.jpeg"  alt="Green Bliss 5">
+        <img src="assets/CompletedProjects/green-bliss/6.jpeg"  alt="Green Bliss 6">
+        <img src="assets/CompletedProjects/green-bliss/7.jpeg"  alt="Green Bliss 7">
+        <img src="assets/CompletedProjects/green-bliss/8.jpeg"  alt="Green Bliss 8">
+        <img src="assets/CompletedProjects/green-bliss/9.jpeg"  alt="Green Bliss 9">
+        <img src="assets/CompletedProjects/green-bliss/10.jpeg" alt="Green Bliss 10">
+        <img src="assets/CompletedProjects/green-bliss/11.jpeg" alt="Green Bliss 11">
+        <img src="assets/CompletedProjects/green-bliss/12.jpeg" alt="Green Bliss 12">
+        <img src="assets/CompletedProjects/green-bliss/13.jpeg" alt="Green Bliss 13">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 7 — AGRI DIVERSITY IN 1 CENT FARMING
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase alt-section" id="agri-diversity">
+    <div class="container">
+      <h2 class="section-title">Agri Diversity in 1 Cent Farming</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">Integrated farming combining five modern techniques within just one cent of land.</p>
+          <p>The after-effects of flood and Covid-19 made farming and the economy suffer. In this context, integrated farming through combined methods is very significant — if agriculture in one cent of land can be tested, this could be projected to 10 cents and then one acre as a solution to community difficulties.</p>
+          <p>For this, we combine Hydroponic farming, Aquaponic farming, Vertical farming, Wick farming, and Aquatic farming in a systematic way in one-cent land.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Methods</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">22</span>
+              <span class="stat-label">Photos</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="agriDiversityGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-heading">📷 Full Photo Gallery</div>
+      <div class="photo-gallery">
+        <img src="assets/CompletedProjects/Lettuceleague/1.jpeg"  alt="AD 1">
+        <img src="assets/CompletedProjects/Lettuceleague/2.jpeg"  alt="AD 2">
+        <img src="assets/CompletedProjects/Lettuceleague/3.jpeg"  alt="AD 3">
+        <img src="assets/CompletedProjects/Lettuceleague/4.jpeg"  alt="AD 4">
+        <img src="assets/CompletedProjects/Lettuceleague/5.jpeg"  alt="AD 5">
+        <img src="assets/CompletedProjects/Lettuceleague/6.jpeg"  alt="AD 6">
+        <img src="assets/CompletedProjects/Lettuceleague/7.jpeg"  alt="AD 7">
+        <img src="assets/CompletedProjects/Lettuceleague/8.jpeg"  alt="AD 8">
+        <img src="assets/CompletedProjects/Lettuceleague/9.jpeg"  alt="AD 9">
+        <img src="assets/CompletedProjects/Lettuceleague/10.jpeg" alt="AD 10">
+        <img src="assets/CompletedProjects/Lettuceleague/11.jpeg" alt="AD 11">
+        <img src="assets/CompletedProjects/Lettuceleague/12.jpeg" alt="AD 12">
+        <img src="assets/CompletedProjects/Lettuceleague/13.jpeg" alt="AD 13">
+        <img src="assets/CompletedProjects/Lettuceleague/14.jpeg" alt="AD 14">
+        <img src="assets/CompletedProjects/Lettuceleague/15.jpeg" alt="AD 15">
+        <img src="assets/CompletedProjects/Lettuceleague/16.jpeg" alt="AD 16">
+        <img src="assets/CompletedProjects/Lettuceleague/17.jpeg" alt="AD 17">
+        <img src="assets/CompletedProjects/Lettuceleague/18.jpeg" alt="AD 18">
+        <img src="assets/CompletedProjects/Lettuceleague/19.jpeg" alt="AD 19">
+        <img src="assets/CompletedProjects/Lettuceleague/20.jpeg" alt="AD 20">
+        <img src="assets/CompletedProjects/Lettuceleague/21.jpeg" alt="AD 21">
+        <img src="assets/CompletedProjects/Lettuceleague/22.jpeg" alt="AD 22">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECT 8 — CANNON GUN
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase" id="cannon-gun">
+    <div class="container">
+      <h2 class="section-title">Cannon Gun</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Agriculture 2021-22</span>
+          <p class="large-text">A non-lethal device to resolve human-animal conflict and protect crops without harm.</p>
+          <p>To solve human-animal conflict without loss to any life, we conceptualised a CANNON GUN. This is manufactured with PVC pipes, calcium carbonite, and gas lighters. The device creates a loud noise to safely deter wildlife from farmland without causing any harm to the animals.</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Photos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Videos</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-gallery">
+          <div class="card-stack" id="cannonGunGallery">
+            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-heading">📷 Photos</div>
+      <div class="photo-gallery">
+        <img src="assets/CompletedProjects/CanonGun/1.jpg" alt="Cannon Gun 1">
+        <img src="assets/CompletedProjects/CanonGun/3.jpg" alt="Cannon Gun 3">
+        <img src="assets/CompletedProjects/CanonGun/9.jpg" alt="Cannon Gun 9">
+      </div>
+      <div class="gallery-heading">🎬 Videos</div>
+      <div class="video-gallery">
+        <video controls><source src="assets/CompletedProjects/CanonGun/4.mp4"  type="video/mp4"></video>
+        <video controls><source src="assets/CompletedProjects/CanonGun/5.mp4"  type="video/mp4"></video>
+        <video controls><source src="assets/CompletedProjects/CanonGun/6.mp4"  type="video/mp4"></video>
+        <video controls><source src="assets/CompletedProjects/CanonGun/7.mp4"  type="video/mp4"></video>
+        <video controls><source src="assets/CompletedProjects/CanonGun/8.mp4"  type="video/mp4"></video>
+        <video controls><source src="assets/CompletedProjects/CanonGun/2.mp4"  type="video/mp4"></video>
+        <video controls><source src="assets/CompletedProjects/CanonGun/10.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       STEM FOR ENVIRONMENT 2023-24
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="project-showcase alt-section" id="stem-environment">
+    <div class="container">
+      <h2 class="section-title">STEM4Environment</h2>
+      <div class="project-content">
+        <div class="project-description">
+          <span class="year-badge">Competition 2023 – 24</span>
+          <p class="large-text">Addressing sustainability and environmental challenges through student-led STEM innovation.</p>
+          <p>STEM4Girls launched the STEM for Environment competition in October 2023. Students were invited to develop hypothesis-driven research projects tackling real-world environmental and sustainability challenges.</p>
+          <p>Grants of up to $250 were available for selected projects, with teams presenting their work at the International Research Conference for Children (IRCC).</p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <span class="stat-number">$250</span>
+              <span class="stat-label">Grant</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2023-24</span>
+              <span class="stat-label">Year</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <div class="visual-card" style="width:100%;max-width:380px;">
+            <h3>Key Dates</h3>
+            <div class="category-list">
+              <div class="category-item"><span>📅</span><p><strong>Posted:</strong> October 1, 2023</p></div>
+              <div class="category-item"><span>📤</span><p><strong>Deadline:</strong> April 10, 2024</p></div>
+              <div class="category-item"><span>🔬</span><p><strong>Review:</strong> May 15, 2024</p></div>
+              <div class="category-item"><span>🏆</span><p><strong>Results:</strong> July 2024</p></div>
+              <div class="category-item"><span>🚀</span><p><strong>Project period:</strong> Aug 2024 – Jul 2025</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="env-info-list">
+        <li><strong>Eligibility</strong>K–PG students identifying as female, or groups with at least one female; 4–10 students per team</li>
+        <li><strong>Categories</strong>Elementary (1st–5th), Middle School (6th–8th), High School (9th–12th)</li>
+        <li><strong>Focus</strong>Sustainability and environmental STEM projects addressing ongoing environmental issues</li>
+        <li><strong>Presentations</strong>Selected teams presented at IRCC in May–June 2024</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ══ CTA ═══════════════════════════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Want to See Your Project Here?</h2>
+        <p>Join our next competition and showcase your innovative STEM research</p>
+        <div class="cta-buttons">
+          <a href="register.html" class="btn btn-primary btn-lg">Register Your Team</a>
+          <a href="resources.html" class="btn btn-outline btn-lg">Browse Project Ideas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-logo"><img src="images/logo-inverse.png" alt="STEM4Girls"></h3>
+          <p>Empowering the next generation of STEM leaders through innovation and research.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="competition.html">Competition</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="previous-projects.html">Previous Projects</a></li>
+            <li><a href="donate.html">Donate</a></li><li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li>📧 stem@stem4girls.org</li>
+            <li>📞 503-583-2255</li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STEM4Girls. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    /* Load project-specific images into each card-stack gallery */
+    const galleries = {
+      agricultureGallery: [
+        'images/sp1.jpg','images/sp2.jpg','images/sp3.jpg','images/sp4.jpg',
+        'images/sp5.jpg','images/sp6.jpg','images/sp7.jpg','images/sp8.jpg'
+      ],
+      wildVegGallery: [
+        'assets/CompletedProjects/WildVegitableCultivation/1.jpg',
+        'assets/CompletedProjects/WildVegitableCultivation/2.jpg',
+        'assets/CompletedProjects/WildVegitableCultivation/3.jpg',
+        'assets/CompletedProjects/WildVegitableCultivation/4.jpg',
+        'assets/CompletedProjects/WildVegitableCultivation/5.jpg',
+        'assets/CompletedProjects/WildVegitableCultivation/6.jpg'
+      ],
+      verticalFarmGallery: [
+        'assets/CompletedProjects/verical-farming/1.jpeg',
+        'assets/CompletedProjects/verical-farming/2.jpeg',
+        'assets/CompletedProjects/verical-farming/3.jpeg',
+        'assets/CompletedProjects/verical-farming/4.jpeg',
+        'assets/CompletedProjects/verical-farming/5.jpeg',
+        'assets/CompletedProjects/verical-farming/6.jpeg'
+      ],
+      capsicumGallery: [
+        'assets/CompletedProjects/harvestingofcapsicum/1.jpg',
+        'assets/CompletedProjects/harvestingofcapsicum/2.jpg',
+        'assets/CompletedProjects/harvestingofcapsicum/3.jpg',
+        'assets/CompletedProjects/harvestingofcapsicum/4.jpg',
+        'assets/CompletedProjects/harvestingofcapsicum/5.jpg'
+      ],
+      greenBlissGallery: [
+        'assets/CompletedProjects/green-bliss/1.jpeg',
+        'assets/CompletedProjects/green-bliss/2.jpeg',
+        'assets/CompletedProjects/green-bliss/3.jpeg',
+        'assets/CompletedProjects/green-bliss/4.jpeg',
+        'assets/CompletedProjects/green-bliss/5.jpeg',
+        'assets/CompletedProjects/green-bliss/6.jpeg'
+      ],
+      agriDiversityGallery: [
+        'assets/CompletedProjects/Lettuceleague/1.jpeg',
+        'assets/CompletedProjects/Lettuceleague/2.jpeg',
+        'assets/CompletedProjects/Lettuceleague/3.jpeg',
+        'assets/CompletedProjects/Lettuceleague/4.jpeg',
+        'assets/CompletedProjects/Lettuceleague/5.jpeg',
+        'assets/CompletedProjects/Lettuceleague/6.jpeg'
+      ],
+      cannonGunGallery: [
+        'assets/CompletedProjects/CanonGun/1.jpg',
+        'assets/CompletedProjects/CanonGun/3.jpg',
+        'assets/CompletedProjects/CanonGun/9.jpg'
+      ]
+    };
+
+    /* Inject stack-card images before the nav buttons */
+    Object.entries(galleries).forEach(([id, imgs]) => {
+      const stack = document.getElementById(id);
+      if (!stack) return;
+      const prevBtn = stack.querySelector('.prev-btn');
+      imgs.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = 'stack-card';
+        img.alt = '';
+        stack.insertBefore(img, prevBtn);
+      });
+    });
+  </script>
+</body>
+</html>
